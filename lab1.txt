@@ -1,0 +1,38 @@
+% We have a biased coin.
+0.4 :: heads.
+
+% We have two bins containing colored balls.
+0.3 :: col(1,red); 0.7 :: col(1,blue).
+0.2 :: col(2,red); 0.3 :: col(2,green); 0.5 :: col(2,blue).
+
+% These are the rules of the game:
+% If the coin shows heads and we have a red ball, we win.
+win :- heads, col(_,red).
+% If we have two balls of the same color, we win.
+win :- col(1,C), col(2,C).
+
+%a
+%query(win). 
+
+%b
+%red_ball :-col(1,red);col(2,red).
+%query(red_ball).
+
+%c
+%evidence(heads).
+%query(win).
+
+%d
+%evidence(win).
+%query(col(1,blue)).
+
+%e
+%evidence(not (win)).
+%query(col(1,blue)).
+
+%f
+%evidence(win).
+%any_ball :- col(_,blue).
+%query(any_ball).
+
+%

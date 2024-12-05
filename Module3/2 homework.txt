@@ -1,0 +1,3 @@
+2 homework
+torch_geometric.dataser for gnns
+Chooose a dataset then use gnn alg and evaluate
